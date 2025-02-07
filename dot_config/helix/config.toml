@@ -1,0 +1,55 @@
+# theme = "catppuccin_mocha"
+theme = "catppuccin_latte"
+
+### EDITOR ###
+[editor]
+line-number  = "relative"
+cursorcolumn = true
+cursorline = true
+bufferline = "multiple"
+color-modes  = true
+continue-comments = false
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+
+[editor.statusline]
+left         = [ "separator", "spacer", "mode","spacer","separator","spacer", "version-control", "spacer", "spinner"]
+center       = [ "workspace-diagnostics","spacer","separator", "file-name","separator", "spacer", "position-percentage" ]
+right        = ["file-modification-indicator", "spacer","separator", "file-type"]
+separator    = "⤫"
+mode.normal  = "NORM"
+mode.insert  = "INSIDE"
+mode.select  = "SELECT"
+
+[editor.lsp]
+snippets         = false
+display-messages = true
+
+[editor.indent-guides]
+render = true
+character = "┊"
+skip-levels = 1
+
+[editor.cursor-shape]
+insert       = "underline"
+select       = "hidden"
+
+[editor.file-picker]
+hidden = false
+
+[editor.gutters.line-numbers]
+min-width = 1
+
+### KEYS ###
+[keys.normal]
+# window movement
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
+C-v = ":vnew"
+
+# buffer movement
+C-b = "goto_previous_buffer"
+C-n = "goto_next_buffer"

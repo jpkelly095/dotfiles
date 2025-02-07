@@ -1,0 +1,39 @@
+[language-server.gopls.config]
+"formatting.gofumpt" = false
+
+[[language]]
+name = "python"
+roots = [
+  "pyproject.toml",
+  "main.py",
+  "setup.py",
+  "requirements.txt",
+  "pyrightconfig.json",
+]
+language-servers = [ "pyright" ]
+auto-format = true 
+
+[language.formatter]
+command = "black"
+args = ["--line-length", "88", "--quiet", "-"]
+
+[[language]]
+name = "html"
+language-servers= [ "vscode-html-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "css"
+language-servers= [ "vscode-css-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "jsx"
+language-servers= [ "typescript-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "tsx"
+language-servers= [ "typescript-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "svelte"
+language-servers= [ "svelteserver", "tailwindcss-ls" ]
+

@@ -1,0 +1,55 @@
+
+add_newline = false
+
+# A minimal left prompt
+format = """$python$golang$directory$character"""
+
+# move the rest of the prompt to the right
+right_format = """$status$git_branch$git_status"""
+
+[character]
+success_symbol = "[❯](red)[❯](yellow)[❯](green) "
+error_symbol = "[❯](red)[❯](yellow)[❯](green) "
+
+[git_branch]
+format = '[$branch]($style) '
+style = 'yellow'
+
+[python]
+format = '[$symbol\($virtualenv\)](141) '
+
+[golang]
+format = '[$symbol\($version\)](141) '
+symbol = '🦫 '
+
+[git_status]
+format = '[\[$all_status$ahead_behind\]](bright-white)'
+ahead = '[](red) '
+behind = '[](green) '
+staged = '[✚](034) ' # green
+deleted = '[✖](162) ' # red
+renamed = '[➜](141) ' # purple
+untracked = '🔎'
+stashed = '💰'
+modified = '[✱](012) ' # blue
+conflicted = '[═](yellow) '
+diverged = ' '
+up_to_date = ''
+
+[directory]
+style = "yellow"
+truncation_length = 1
+truncation_symbol = ""
+fish_style_pwd_dir_length = 1
+
+[cmd_duration]
+format = '[$duration]($style) '
+disabled = true
+min_time=31555952000
+
+[line_break]
+disabled = true
+
+[status]
+disabled = false
+symbol = '✘ '
