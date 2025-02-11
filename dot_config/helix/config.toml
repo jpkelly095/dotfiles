@@ -3,7 +3,6 @@ theme = "catppuccin_latte"
 
 ### EDITOR ###
 [editor]
-line-number  = "relative"
 cursorcolumn = true
 cursorline = true
 bufferline = "multiple"
