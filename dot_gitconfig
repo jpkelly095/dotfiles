@@ -7,3 +7,5 @@
 	insteadOf = https://github.com/
 [pager]
 	branch = false
+[push]
+	autoSetupRemote = true
