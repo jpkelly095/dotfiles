@@ -1,0 +1,5 @@
+alias zshconfig="$EDITOR ~/.zshrc"
+alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
+alias la="ls --color -a -l -h"
+alias ya="yazi"
+alias air="~/.air"
