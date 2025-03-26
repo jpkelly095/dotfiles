@@ -37,3 +37,31 @@ language-servers= [ "typescript-language-server", "tailwindcss-ls" ]
 name = "svelte"
 language-servers= [ "svelteserver", "tailwindcss-ls" ]
 
+
+[language-server]
+
+terraform-ls = { command = "terraform-ls", args = ["serve"] }
+
+[[language]]
+name = "hcl"
+scope = "source.hcl"
+injection-regex = "(hcl|tf|nomad)"
+language-id = "terraform"
+file-types = ["hcl", "tf", "nomad"]
+comment-token = "#"
+block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "terraform-ls" ]
+auto-format = true
+
+[[language]]
+name = "tfvars"
+scope = "source.tfvars"
+language-id = "terraform-vars"
+file-types = ["tfvars"]
+comment-token = "#"
+block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "terraform-ls" ]
+auto-format = true
+grammar = "hcl"
