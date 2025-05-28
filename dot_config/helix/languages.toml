@@ -1,4 +1,14 @@
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+
+[language-server.gopls]
+command = "gopls"
+
 [language-server.gopls.config]
+local = "goimports"
+completeUnimported = true
 "formatting.gofumpt" = false
 
 [[language]]
