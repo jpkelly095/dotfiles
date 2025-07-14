@@ -118,10 +118,7 @@ export GITHUB_SSH_KEY=$(cat ~/.ssh/id_ed25519)
 ## Go local Dev needs
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-# Homebrew
-export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
 export GOOS=darwin
 export GOARCH=arm64
 export GOPRIVATE=github.com/urbn
