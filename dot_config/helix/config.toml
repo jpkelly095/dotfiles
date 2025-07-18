@@ -8,6 +8,7 @@ bufferline = "multiple"
 color-modes  = true
 continue-comments = false
 jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
+end-of-line-diagnostics = "hint"
 
 [editor.inline-diagnostics]
 cursor-line = "error"
