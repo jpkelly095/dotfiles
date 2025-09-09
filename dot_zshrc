@@ -177,6 +177,9 @@ export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/libxml2/lib/pkgconfig"
 # pycurl Setup
 PYCURL_SSL_LIBRARY=openssl
 
+# improve cbuild performance
+COMPOSE_BAKE=true
+
 # ruby/rbenv
 # Added by `rbenv init` on Sat Apr 12 16:46:02 EDT 2025
 eval "$(rbenv init - --no-rehash zsh)"
