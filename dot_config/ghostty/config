@@ -15,8 +15,9 @@ theme = catppuccin-frappe.conf
 
 ### FONT STUFF
 font-thicken = true
-font-family = CommitMono
+font-thicken-strength = 25
 font-size = 15
+# font-family = CommitMono
 
 ### WINDOW STUFF
 background-opacity = 0.95
@@ -24,10 +25,8 @@ background-blur = true
 window-title-font-family = Hack
 cursor-style = block
 macos-titlebar-proxy-icon = hidden
-# macos-window-buttons = hidden
-title = "👻"
-window-height = 65
-window-width = 215
+window-height = 64
+window-width = 284
 
 ### CUSTOM MACOS ICON
 macos-icon = custom

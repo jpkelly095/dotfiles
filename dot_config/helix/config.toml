@@ -10,17 +10,19 @@ continue-comments = false
 jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
 end-of-line-diagnostics = "hint"
 
-[editor.inline-diagnostics]
-cursor-line = "error"
-
 [editor.statusline]
-left         = [ "separator", "spacer", "mode","spacer","separator","spacer", "version-control", "spacer", "spinner"]
-center       = [ "workspace-diagnostics","spacer","separator", "file-name","separator", "spacer", "position-percentage" ]
-right        = ["file-modification-indicator", "spacer","separator", "file-type"]
-separator    = "⤫"
-mode.normal  = "NORM"
-mode.insert  = "INSIDE"
-mode.select  = "SELECT"
+left = ["mode", "file-name", "spinner", "spacer"]
+center = ["version-control", "spacer"]
+right = ["workspace-diagnostics", "separator", "selections", "separator", "position", "separator"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
 
 [editor.lsp]
 snippets         = false
@@ -50,7 +52,11 @@ C-k = "jump_view_up"
 C-l = "jump_view_right"
 C-v = ":vnew"
 "ret" = "goto_word"
-
 # buffer movement
 C-b = "goto_previous_buffer"
 C-n = "goto_next_buffer"
+
+[keys.select]
+# Unselect the line above
+A-x = "extend_to_line_bounds"
+X = ["extend_line_up", "extend_to_line_bounds"]

@@ -13,7 +13,6 @@ style = 'cyan'
 
 [directory]
 style = 'yellow bold'
-# truncation_length = 4
 
 [line_break]
 disabled = true
