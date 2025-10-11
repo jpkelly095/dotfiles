@@ -96,7 +96,7 @@ plugins=(
 # export ARCHFLAGS="-arch x86_64"
 
 # Sources bash OSC7 integration for wezterm
-source "/Users/jkelly/.wezterm_osc.sh"
+# source "/Users/jkelly/.wezterm_osc.sh"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/jkelly/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jkelly/google-cloud-sdk/path.zsh.inc'; fi
@@ -186,5 +186,9 @@ eval "$(rbenv init - --no-rehash zsh)"
 
 source $ZSH/oh-my-zsh.sh
 
+# Init zellij
+eval "$(zellij setup --generate-auto-start zsh)"
+
 # Init starship prompt
 eval "$(starship init zsh)"
+

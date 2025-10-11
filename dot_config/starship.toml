@@ -1,55 +1,31 @@
-
 add_newline = false
+command_timeout = 1000
 
-# A minimal left prompt
-format = """$python$golang$directory$character"""
-
-# move the rest of the prompt to the right
-right_format = """$status$git_branch$git_status"""
+format = """$ruby$python$golang$directory$status$character"""
+right_format = """$git_branch"""
 
 [character]
-success_symbol = "[❯](red)[❯](yellow)[❯](green) "
-error_symbol = "[❯](red)[❯](yellow)[❯](green) "
+success_symbol = '[❯](green) '
 
 [git_branch]
 format = '[$branch]($style) '
-style = 'yellow'
-
-[python]
-format = '[$symbol\($virtualenv\)](141) '
-
-[golang]
-format = '[$symbol\($version\)](141) '
-symbol = '🦫 '
-
-[git_status]
-format = '[\[$all_status$ahead_behind\]](bright-white)'
-ahead = '[](red) '
-behind = '[](green) '
-staged = '[✚](034) ' # green
-deleted = '[✖](162) ' # red
-renamed = '[➜](141) ' # purple
-untracked = '🔎'
-stashed = '💰'
-modified = '[✱](012) ' # blue
-conflicted = '[═](yellow) '
-diverged = ' '
-up_to_date = ''
+style = 'cyan'
 
 [directory]
-style = "yellow"
-truncation_length = 1
-truncation_symbol = ""
-fish_style_pwd_dir_length = 1
-
-[cmd_duration]
-format = '[$duration]($style) '
-disabled = true
-min_time=31555952000
+style = 'yellow bold'
+# truncation_length = 4
 
 [line_break]
 disabled = true
 
-[status]
-disabled = false
-symbol = '✘ '
+[python]
+format = '[${symbol}(${version} )(\($virtualenv\) )]($style)'
+style = 'blue bold'
+pyenv_version_name = true
+
+[golang]
+symbol = '🦫 '
+format = '[$symbol($version )]($style)'
+
+[ruby]
+format = '[$symbol($version )]($style)'
