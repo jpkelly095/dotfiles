@@ -56,6 +56,25 @@ C-v = ":vnew"
 C-b = "goto_previous_buffer"
 C-n = "goto_next_buffer"
 
+# lazygit
+C-g = [
+    ":write-all",
+    ":insert-output lazygit >/dev/tty",
+    ":redraw",
+    ":reload-all"
+]
+
+# yazi
+C-y = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi --chooser-file=/tmp/unique-file',
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+  ':set mouse false',
+  ':set mouse true',
+]
+
 [keys.select]
 # Unselect the line above
 A-x = "extend_to_line_bounds"
