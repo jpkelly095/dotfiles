@@ -187,8 +187,18 @@ eval "$(rbenv init - --no-rehash zsh)"
 source $ZSH/oh-my-zsh.sh
 
 # Init zellij
-eval "$(zellij setup --generate-auto-start zsh)"
+if [[ -z "$ZELLIJ" ]] && [[ -z "$SSH_CONNECTION"  ]] && [[ "$TERM_PROGRAM" != "vscode" ]]  ; then
+  if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+      zellij attach -c
+  else
+  	eval "$(zellij setup --generate-auto-start zsh)"
+  	eval "$(zellij setup --generate-completion zsh)"
+  fi
 
+  if [[ "$ZELLIJ_AUTO_EXIT" == "TRUE" ]]; then
+      exit
+  fi
+fi
 # Init starship prompt
 eval "$(starship init zsh)"
 

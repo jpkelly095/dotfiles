@@ -1,6 +1,5 @@
 [user]
-	name = James Kelly
-	email = jkelly@urbn.com
+	name = James Foley
 [init]
 	defaultBranch = main
 [url "ssh://git@github.com/"]
@@ -9,3 +8,7 @@
 	branch = false
 [push]
 	autoSetupRemote = true
+[includeIf "gitdir:~/code/personal/**"]
+	path = ~/code/personal/.gitconfig
+[includeIf "gitdir:~/code/urbn/**"]
+	path = ~/code/urbn/.gitconfig
