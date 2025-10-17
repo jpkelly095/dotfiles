@@ -6,6 +6,7 @@ right_format = """$git_branch"""
 
 [character]
 success_symbol = '[❯](green) '
+error_symbol = '[❯](red) '
 
 [git_branch]
 format = '[$branch]($style) '
